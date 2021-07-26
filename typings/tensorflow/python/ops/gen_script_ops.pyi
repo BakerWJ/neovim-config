@@ -1,0 +1,19 @@
+from tensorflow.python.util.deprecation import deprecated_endpoints as deprecated_endpoints
+from tensorflow.python.util.tf_export import tf_export as tf_export
+from typing import Any, Optional
+
+def eager_py_func(input: Any, token: Any, Tout: Any, is_async: bool = ..., name: Optional[Any] = ...): ...
+
+EagerPyFunc: Any
+
+def eager_py_func_eager_fallback(input: Any, token: Any, Tout: Any, is_async: Any, name: Any, ctx: Any): ...
+def py_func(input: Any, token: Any, Tout: Any, name: Optional[Any] = ...): ...
+
+PyFunc: Any
+
+def py_func_eager_fallback(input: Any, token: Any, Tout: Any, name: Any, ctx: Any): ...
+def py_func_stateless(input: Any, token: Any, Tout: Any, name: Optional[Any] = ...): ...
+
+PyFuncStateless: Any
+
+def py_func_stateless_eager_fallback(input: Any, token: Any, Tout: Any, name: Any, ctx: Any): ...

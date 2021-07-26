@@ -1,0 +1,3 @@
+from typing import Any
+
+def track_usage(tool_id: Any, tags: Any) -> None: ...

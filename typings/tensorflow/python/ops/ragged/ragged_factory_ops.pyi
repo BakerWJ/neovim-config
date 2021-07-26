@@ -1,0 +1,9 @@
+from tensorflow.python.framework import constant_op as constant_op, dtypes as dtypes, ops as ops, tensor_shape as tensor_shape
+from tensorflow.python.ops import array_ops as array_ops
+from tensorflow.python.ops.ragged import ragged_tensor as ragged_tensor, ragged_tensor_value as ragged_tensor_value
+from tensorflow.python.util.tf_export import tf_export as tf_export
+from typing import Any, Optional
+
+def constant(pylist: Any, dtype: Optional[Any] = ..., ragged_rank: Optional[Any] = ..., inner_shape: Optional[Any] = ..., name: Optional[Any] = ..., row_splits_dtype: Any = ...): ...
+def constant_value(pylist: Any, dtype: Optional[Any] = ..., ragged_rank: Optional[Any] = ..., inner_shape: Optional[Any] = ..., row_splits_dtype: str = ...): ...
+def placeholder(dtype: Any, ragged_rank: Any, value_shape: Optional[Any] = ..., name: Optional[Any] = ...): ...

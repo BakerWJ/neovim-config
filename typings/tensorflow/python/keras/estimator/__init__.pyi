@@ -1,0 +1,6 @@
+from tensorflow.python.eager import monitoring as monitoring
+from tensorflow.python.util.tf_export import keras_export as keras_export
+from typing import Any, Optional
+
+def model_to_estimator(keras_model: Optional[Any] = ..., keras_model_path: Optional[Any] = ..., custom_objects: Optional[Any] = ..., model_dir: Optional[Any] = ..., config: Optional[Any] = ..., checkpoint_format: str = ...): ...
+def model_to_estimator_v2(keras_model: Optional[Any] = ..., keras_model_path: Optional[Any] = ..., custom_objects: Optional[Any] = ..., model_dir: Optional[Any] = ..., config: Optional[Any] = ..., checkpoint_format: str = ...): ...

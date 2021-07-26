@@ -1,0 +1,2 @@
+KERAS_ATTR: str
+KERAS_CACHE_KEY: str

@@ -1,0 +1,3 @@
+from typing import Any
+
+def dismantle_ordered_dict(ordered_dict: Any) -> None: ...

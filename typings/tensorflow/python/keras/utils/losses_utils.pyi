@@ -1,0 +1,13 @@
+from tensorflow.python.distribute import distribution_strategy_context as distribution_strategy_context
+from tensorflow.python.framework import ops as ops
+from tensorflow.python.ops import array_ops as array_ops, math_ops as math_ops
+from tensorflow.python.ops.losses import loss_reduction as loss_reduction
+from tensorflow.python.util.tf_export import keras_export as keras_export
+from typing import Any, Optional
+
+ReductionV2: Any
+
+def reduce_weighted_loss(weighted_losses: Any, reduction: Any = ...): ...
+def compute_weighted_loss(losses: Any, sample_weight: Optional[Any] = ..., reduction: Any = ..., name: Optional[Any] = ...): ...
+def scale_loss_for_distribution(loss_value: Any): ...
+def cast_losses_to_common_dtype(losses: Any): ...

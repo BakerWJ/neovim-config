@@ -1,0 +1,6 @@
+from tensorflow.python.debug.lib import debug_data as debug_data
+from typing import Any
+
+class ExpressionEvaluator:
+    def __init__(self, dump: Any) -> None: ...
+    def evaluate(self, expression: Any): ...

@@ -1,0 +1,39 @@
+from tensorflow.python.keras import layers as keras_layers
+from tensorflow.python.layers import base as base
+from tensorflow.python.util import deprecation as deprecation
+from tensorflow.python.util.tf_export import tf_export as tf_export
+from typing import Any, Optional
+
+class AveragePooling1D(keras_layers.AveragePooling1D, base.Layer):
+    def __init__(self, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def average_pooling1d(inputs: Any, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ...): ...
+
+class MaxPooling1D(keras_layers.MaxPooling1D, base.Layer):
+    def __init__(self, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def max_pooling1d(inputs: Any, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ...): ...
+
+class AveragePooling2D(keras_layers.AveragePooling2D, base.Layer):
+    def __init__(self, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def average_pooling2d(inputs: Any, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ...): ...
+
+class MaxPooling2D(keras_layers.MaxPooling2D, base.Layer):
+    def __init__(self, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def max_pooling2d(inputs: Any, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ...): ...
+
+class AveragePooling3D(keras_layers.AveragePooling3D, base.Layer):
+    def __init__(self, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def average_pooling3d(inputs: Any, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ...): ...
+
+class MaxPooling3D(keras_layers.MaxPooling3D, base.Layer):
+    def __init__(self, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def max_pooling3d(inputs: Any, pool_size: Any, strides: Any, padding: str = ..., data_format: str = ..., name: Optional[Any] = ...): ...
+AvgPool2D = AveragePooling2D
+MaxPool2D = MaxPooling2D
+max_pool2d = max_pooling2d
+avg_pool2d = average_pooling2d

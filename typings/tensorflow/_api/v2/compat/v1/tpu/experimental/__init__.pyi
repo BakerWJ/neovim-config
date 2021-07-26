@@ -1,0 +1,3 @@
+from tensorflow.python.tpu.device_assignment import DeviceAssignment as DeviceAssignment
+from tensorflow.python.tpu.tpu_embedding import AdagradParameters as AdagradParameters, AdamParameters as AdamParameters, FtrlParameters as FtrlParameters, StochasticGradientDescentParameters as StochasticGradientDescentParameters
+from tensorflow.python.tpu.tpu_strategy_util import initialize_tpu_system as initialize_tpu_system, shutdown_tpu_system as shutdown_tpu_system

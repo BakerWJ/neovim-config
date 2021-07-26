@@ -1,0 +1,6 @@
+from tensorflow.python.autograph.pyct import origin_info as origin_info, parser as parser
+from tensorflow.python.autograph.utils import compat_util as compat_util
+from typing import Any
+
+def load_source(source: Any, delete_on_exit: Any): ...
+def load_ast(nodes: Any, indentation: str = ..., include_source_map: bool = ..., delete_on_exit: bool = ...): ...

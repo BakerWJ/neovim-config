@@ -1,0 +1,3 @@
+mixed_precision_graph_rewrite_is_enabled: bool
+non_mixed_precision_session_created: bool
+using_default_mixed_precision_policy: bool

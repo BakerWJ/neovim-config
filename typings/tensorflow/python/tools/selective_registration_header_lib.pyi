@@ -1,0 +1,9 @@
+from tensorflow.core.framework import graph_pb2 as graph_pb2
+from tensorflow.python.platform import gfile as gfile, tf_logging as tf_logging
+from typing import Any
+
+OPS_WITHOUT_KERNEL_WHITELIST: Any
+
+def get_ops_and_kernels(proto_fileformat: Any, proto_files: Any, default_ops_str: Any): ...
+def get_header_from_ops_and_kernels(ops_and_kernels: Any, include_all_ops_and_kernels: Any): ...
+def get_header(graphs: Any, proto_fileformat: str = ..., default_ops: str = ...): ...

@@ -1,0 +1,23 @@
+from tensorflow.python.compat import compat as compat
+from tensorflow.python.data.experimental.ops.distribute_options import AutoShardPolicy as AutoShardPolicy
+from tensorflow.python.data.ops import dataset_ops as dataset_ops
+from tensorflow.python.data.util import nest as nest
+from tensorflow.python.framework import ops as ops
+from typing import Any
+
+class _AutoShardDataset(dataset_ops.UnaryDataset):
+    def __init__(self, input_dataset: Any, num_workers: Any, index: Any) -> None: ...
+    @property
+    def element_spec(self): ...
+
+class _RebatchDataset(dataset_ops.UnaryDataset):
+    def __init__(self, input_dataset: Any, num_replicas: Any, use_fallback: bool = ...): ...
+    @property
+    def element_spec(self): ...
+
+class _RemoteDataset(dataset_ops.DatasetSource):
+    def __init__(self, graph_def: Any, device: Any, element_spec: Any) -> None: ...
+    @property
+    def element_spec(self): ...
+
+def replicate(dataset: Any, devices: Any): ...

@@ -1,0 +1,23 @@
+from tensorflow.python.keras import layers as keras_layers
+from tensorflow.python.layers import base as base
+from tensorflow.python.ops import init_ops as init_ops
+from tensorflow.python.util import deprecation as deprecation
+from tensorflow.python.util.tf_export import tf_export as tf_export
+from typing import Any, Optional
+
+class Dense(keras_layers.Dense, base.Layer):
+    def __init__(self, units: Any, activation: Optional[Any] = ..., use_bias: bool = ..., kernel_initializer: Optional[Any] = ..., bias_initializer: Any = ..., kernel_regularizer: Optional[Any] = ..., bias_regularizer: Optional[Any] = ..., activity_regularizer: Optional[Any] = ..., kernel_constraint: Optional[Any] = ..., bias_constraint: Optional[Any] = ..., trainable: bool = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+
+def dense(inputs: Any, units: Any, activation: Optional[Any] = ..., use_bias: bool = ..., kernel_initializer: Optional[Any] = ..., bias_initializer: Any = ..., kernel_regularizer: Optional[Any] = ..., bias_regularizer: Optional[Any] = ..., activity_regularizer: Optional[Any] = ..., kernel_constraint: Optional[Any] = ..., bias_constraint: Optional[Any] = ..., trainable: bool = ..., name: Optional[Any] = ..., reuse: Optional[Any] = ...): ...
+
+class Dropout(keras_layers.Dropout, base.Layer):
+    def __init__(self, rate: float = ..., noise_shape: Optional[Any] = ..., seed: Optional[Any] = ..., name: Optional[Any] = ..., **kwargs: Any) -> None: ...
+    def call(self, inputs: Any, training: bool = ...): ...
+
+def dropout(inputs: Any, rate: float = ..., noise_shape: Optional[Any] = ..., seed: Optional[Any] = ..., training: bool = ..., name: Optional[Any] = ...): ...
+
+class Flatten(keras_layers.Flatten, base.Layer): ...
+
+def flatten(inputs: Any, name: Optional[Any] = ..., data_format: str = ...): ...
+FullyConnected = Dense
+fully_connected = dense

@@ -1,0 +1,9 @@
+from tensorflow.core.framework import function_pb2 as function_pb2, graph_pb2 as graph_pb2, tensor_shape_pb2 as tensor_shape_pb2, types_pb2 as types_pb2, versions_pb2 as versions_pb2
+from tensorflow.python.eager import context as context
+from tensorflow.python.framework import importer as importer, ops as ops, versions as versions
+from tensorflow.python.framework.func_graph import FuncGraph as FuncGraph
+from typing import Any, Optional
+
+def function_def_to_graph(fdef: Any, input_shapes: Optional[Any] = ...): ...
+def is_function(fname: Any): ...
+def function_def_to_graph_def(fdef: Any, input_shapes: Optional[Any] = ...): ...

@@ -1,0 +1,9 @@
+from tensorflow.python.ops.distributions import distribution as distribution_lib
+from typing import Any, Optional
+
+class TransformedDistribution(distribution_lib.Distribution):
+    def __init__(self, distribution: Any, bijector: Optional[Any] = ..., batch_shape: Optional[Any] = ..., event_shape: Optional[Any] = ..., validate_args: bool = ..., name: Optional[Any] = ...) -> None: ...
+    @property
+    def distribution(self): ...
+    @property
+    def bijector(self): ...

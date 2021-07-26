@@ -1,0 +1,3 @@
+from typing import Any
+
+def SetupStatusBarInsideGoogle(unused_link_text: Any, unused_port: Any) -> None: ...

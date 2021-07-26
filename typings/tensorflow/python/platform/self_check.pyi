@@ -1,0 +1,3 @@
+from tensorflow.python.platform import build_info as build_info
+
+def preload_check() -> None: ...

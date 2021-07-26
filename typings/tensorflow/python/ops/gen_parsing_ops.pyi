@@ -1,0 +1,93 @@
+from collections import namedtuple
+from tensorflow.python.util.deprecation import deprecated_endpoints as deprecated_endpoints
+from tensorflow.python.util.tf_export import tf_export as tf_export
+from typing import Any, Optional
+
+def decode_csv(records: Any, record_defaults: Any, field_delim: str = ..., use_quote_delim: bool = ..., na_value: str = ..., select_cols: Any = ..., name: Optional[Any] = ...): ...
+
+DecodeCSV: Any
+
+def decode_csv_eager_fallback(records: Any, record_defaults: Any, field_delim: Any, use_quote_delim: Any, na_value: Any, select_cols: Any, name: Any, ctx: Any): ...
+def decode_compressed(bytes: Any, compression_type: str = ..., name: Optional[Any] = ...): ...
+
+DecodeCompressed: Any
+
+def decode_compressed_eager_fallback(bytes: Any, compression_type: Any, name: Any, ctx: Any): ...
+def decode_json_example(json_examples: Any, name: Optional[Any] = ...): ...
+
+DecodeJSONExample: Any
+
+def decode_json_example_eager_fallback(json_examples: Any, name: Any, ctx: Any): ...
+def decode_padded_raw(input_bytes: Any, fixed_length: Any, out_type: Any, little_endian: bool = ..., name: Optional[Any] = ...): ...
+
+DecodePaddedRaw: Any
+
+def decode_padded_raw_eager_fallback(input_bytes: Any, fixed_length: Any, out_type: Any, little_endian: Any, name: Any, ctx: Any): ...
+def decode_raw(bytes: Any, out_type: Any, little_endian: bool = ..., name: Optional[Any] = ...): ...
+
+DecodeRaw: Any
+
+def decode_raw_eager_fallback(bytes: Any, out_type: Any, little_endian: Any, name: Any, ctx: Any): ...
+
+_ParseExampleOutput = namedtuple('ParseExample', ['sparse_indices', 'sparse_values', 'sparse_shapes', 'dense_values'])
+
+def parse_example(serialized: Any, names: Any, sparse_keys: Any, dense_keys: Any, dense_defaults: Any, sparse_types: Any, dense_shapes: Any, name: Optional[Any] = ...): ...
+
+ParseExample: Any
+
+def parse_example_eager_fallback(serialized: Any, names: Any, sparse_keys: Any, dense_keys: Any, dense_defaults: Any, sparse_types: Any, dense_shapes: Any, name: Any, ctx: Any): ...
+
+_ParseExampleV2Output = namedtuple('ParseExampleV2', ['sparse_indices', 'sparse_values', 'sparse_shapes', 'dense_values', 'ragged_values', 'ragged_row_splits'])
+
+def parse_example_v2(serialized: Any, names: Any, sparse_keys: Any, dense_keys: Any, ragged_keys: Any, dense_defaults: Any, num_sparse: Any, sparse_types: Any, ragged_value_types: Any, ragged_split_types: Any, dense_shapes: Any, name: Optional[Any] = ...): ...
+
+ParseExampleV2: Any
+
+def parse_example_v2_eager_fallback(serialized: Any, names: Any, sparse_keys: Any, dense_keys: Any, ragged_keys: Any, dense_defaults: Any, num_sparse: Any, sparse_types: Any, ragged_value_types: Any, ragged_split_types: Any, dense_shapes: Any, name: Any, ctx: Any): ...
+
+_ParseSequenceExampleOutput = namedtuple('ParseSequenceExample', ['context_sparse_indices', 'context_sparse_values', 'context_sparse_shapes', 'context_dense_values', 'feature_list_sparse_indices', 'feature_list_sparse_values', 'feature_list_sparse_shapes', 'feature_list_dense_values', 'feature_list_dense_lengths'])
+
+def parse_sequence_example(serialized: Any, debug_name: Any, context_dense_defaults: Any, feature_list_dense_missing_assumed_empty: Any, context_sparse_keys: Any, context_dense_keys: Any, feature_list_sparse_keys: Any, feature_list_dense_keys: Any, Ncontext_sparse: int = ..., Ncontext_dense: int = ..., Nfeature_list_sparse: int = ..., Nfeature_list_dense: int = ..., context_sparse_types: Any = ..., feature_list_dense_types: Any = ..., context_dense_shapes: Any = ..., feature_list_sparse_types: Any = ..., feature_list_dense_shapes: Any = ..., name: Optional[Any] = ...): ...
+
+ParseSequenceExample: Any
+
+def parse_sequence_example_eager_fallback(serialized: Any, debug_name: Any, context_dense_defaults: Any, feature_list_dense_missing_assumed_empty: Any, context_sparse_keys: Any, context_dense_keys: Any, feature_list_sparse_keys: Any, feature_list_dense_keys: Any, Ncontext_sparse: Any, Ncontext_dense: Any, Nfeature_list_sparse: Any, Nfeature_list_dense: Any, context_sparse_types: Any, feature_list_dense_types: Any, context_dense_shapes: Any, feature_list_sparse_types: Any, feature_list_dense_shapes: Any, name: Any, ctx: Any): ...
+
+_ParseSequenceExampleV2Output = namedtuple('ParseSequenceExampleV2', ['context_sparse_indices', 'context_sparse_values', 'context_sparse_shapes', 'context_dense_values', 'context_ragged_values', 'context_ragged_row_splits', 'feature_list_sparse_indices', 'feature_list_sparse_values', 'feature_list_sparse_shapes', 'feature_list_dense_values', 'feature_list_dense_lengths', 'feature_list_ragged_values', 'feature_list_ragged_outer_splits', 'feature_list_ragged_inner_splits'])
+
+def parse_sequence_example_v2(serialized: Any, debug_name: Any, context_sparse_keys: Any, context_dense_keys: Any, context_ragged_keys: Any, feature_list_sparse_keys: Any, feature_list_dense_keys: Any, feature_list_ragged_keys: Any, feature_list_dense_missing_assumed_empty: Any, context_dense_defaults: Any, Ncontext_sparse: int = ..., context_sparse_types: Any = ..., context_ragged_value_types: Any = ..., context_ragged_split_types: Any = ..., context_dense_shapes: Any = ..., Nfeature_list_sparse: int = ..., Nfeature_list_dense: int = ..., feature_list_dense_types: Any = ..., feature_list_sparse_types: Any = ..., feature_list_ragged_value_types: Any = ..., feature_list_ragged_split_types: Any = ..., feature_list_dense_shapes: Any = ..., name: Optional[Any] = ...): ...
+
+ParseSequenceExampleV2: Any
+
+def parse_sequence_example_v2_eager_fallback(serialized: Any, debug_name: Any, context_sparse_keys: Any, context_dense_keys: Any, context_ragged_keys: Any, feature_list_sparse_keys: Any, feature_list_dense_keys: Any, feature_list_ragged_keys: Any, feature_list_dense_missing_assumed_empty: Any, context_dense_defaults: Any, Ncontext_sparse: Any, context_sparse_types: Any, context_ragged_value_types: Any, context_ragged_split_types: Any, context_dense_shapes: Any, Nfeature_list_sparse: Any, Nfeature_list_dense: Any, feature_list_dense_types: Any, feature_list_sparse_types: Any, feature_list_ragged_value_types: Any, feature_list_ragged_split_types: Any, feature_list_dense_shapes: Any, name: Any, ctx: Any): ...
+
+_ParseSingleExampleOutput = namedtuple('ParseSingleExample', ['sparse_indices', 'sparse_values', 'sparse_shapes', 'dense_values'])
+
+def parse_single_example(serialized: Any, dense_defaults: Any, num_sparse: Any, sparse_keys: Any, dense_keys: Any, sparse_types: Any, dense_shapes: Any, name: Optional[Any] = ...): ...
+
+ParseSingleExample: Any
+
+def parse_single_example_eager_fallback(serialized: Any, dense_defaults: Any, num_sparse: Any, sparse_keys: Any, dense_keys: Any, sparse_types: Any, dense_shapes: Any, name: Any, ctx: Any): ...
+
+_ParseSingleSequenceExampleOutput = namedtuple('ParseSingleSequenceExample', ['context_sparse_indices', 'context_sparse_values', 'context_sparse_shapes', 'context_dense_values', 'feature_list_sparse_indices', 'feature_list_sparse_values', 'feature_list_sparse_shapes', 'feature_list_dense_values'])
+
+def parse_single_sequence_example(serialized: Any, feature_list_dense_missing_assumed_empty: Any, context_sparse_keys: Any, context_dense_keys: Any, feature_list_sparse_keys: Any, feature_list_dense_keys: Any, context_dense_defaults: Any, debug_name: Any, context_sparse_types: Any = ..., feature_list_dense_types: Any = ..., context_dense_shapes: Any = ..., feature_list_sparse_types: Any = ..., feature_list_dense_shapes: Any = ..., name: Optional[Any] = ...): ...
+
+ParseSingleSequenceExample: Any
+
+def parse_single_sequence_example_eager_fallback(serialized: Any, feature_list_dense_missing_assumed_empty: Any, context_sparse_keys: Any, context_dense_keys: Any, feature_list_sparse_keys: Any, feature_list_dense_keys: Any, context_dense_defaults: Any, debug_name: Any, context_sparse_types: Any, feature_list_dense_types: Any, context_dense_shapes: Any, feature_list_sparse_types: Any, feature_list_dense_shapes: Any, name: Any, ctx: Any): ...
+def parse_tensor(serialized: Any, out_type: Any, name: Optional[Any] = ...): ...
+
+ParseTensor: Any
+
+def parse_tensor_eager_fallback(serialized: Any, out_type: Any, name: Any, ctx: Any): ...
+def serialize_tensor(tensor: Any, name: Optional[Any] = ...): ...
+
+SerializeTensor: Any
+
+def serialize_tensor_eager_fallback(tensor: Any, name: Any, ctx: Any): ...
+def string_to_number(string_tensor: Any, out_type: Any = ..., name: Optional[Any] = ...): ...
+
+StringToNumber: Any
+
+def string_to_number_eager_fallback(string_tensor: Any, out_type: Any, name: Any, ctx: Any): ...

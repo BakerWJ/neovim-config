@@ -1,0 +1,6 @@
+from tensorflow.python.util.tf_export import tf_export as tf_export
+from typing import Any
+
+class Hints:
+    bytes_per_pack: Any = ...
+    def __init__(self, bytes_per_pack: int = ...) -> None: ...

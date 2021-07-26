@@ -1,0 +1,9 @@
+from tensorflow.python.ops.distributions import distribution
+from typing import Any
+
+class Dirichlet(distribution.Distribution):
+    def __init__(self, concentration: Any, validate_args: bool = ..., allow_nan_stats: bool = ..., name: str = ...) -> None: ...
+    @property
+    def concentration(self): ...
+    @property
+    def total_concentration(self): ...

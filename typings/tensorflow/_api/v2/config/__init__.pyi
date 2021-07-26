@@ -1,0 +1,3 @@
+from . import experimental as experimental, optimizer as optimizer, threading as threading
+from tensorflow.python.eager.context import LogicalDevice as LogicalDevice, LogicalDeviceConfiguration as LogicalDeviceConfiguration, PhysicalDevice as PhysicalDevice
+from tensorflow.python.framework.config import get_logical_device_configuration as get_logical_device_configuration, get_soft_device_placement as get_soft_device_placement, get_visible_devices as get_visible_devices, list_logical_devices as list_logical_devices, list_physical_devices as list_physical_devices, set_logical_device_configuration as set_logical_device_configuration, set_soft_device_placement as set_soft_device_placement, set_visible_devices as set_visible_devices
