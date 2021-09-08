@@ -28,6 +28,10 @@ require'nvim-treesitter.configs'.setup {
   incremental_selection = {
     enable=true
   },
+  -- use nvim-ts-autotags
+  autotag = {
+    enable = true,
+  }
 }
 
 -- LSP Setup
@@ -66,6 +70,8 @@ require'lspconfig'.svls.setup{}
 
 require'lspconfig'.texlab.setup{}
 
+require'lspconfig'.tailwindcss.setup{}
+
 local flake8 = {
     lintCommand = "flake8 --max-line-length 88 --format '%(path)s:%(row)d:%(col)d: %(code)s %(code)s %(text)s' --stdin-display-name ${INPUT} -",
     lintStdin = true,
@@ -76,6 +82,11 @@ local flake8 = {
 
 local yapf = {
   formatCommand = "yapf --quiet",
+  formatStdin = true
+}
+
+local black = {
+  formatCommand = "black -",
   formatStdin = true
 }
 
@@ -95,7 +106,7 @@ require'lspconfig'.efm.setup{
               "html", "css", "json", "yaml"},
   settings = {
     languages = {
-      python = {flake8, yapf, isort},
+      python = {flake8, black, isort},
       javascript = {prettier},
       javascriptreact = {prettier},
       typescript = {prettier},
@@ -212,9 +223,6 @@ require'colorizer'.setup()
 
 -- TODO comments
 require"todo-comments".setup{}
-
--- Auto tags HTML
-require('nvim-ts-autotag').setup()
 
 -- Change completion icons
 require('vim.lsp.protocol').CompletionItemKind = {

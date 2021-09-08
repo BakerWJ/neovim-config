@@ -11,9 +11,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 " Commenting
-Plug 'scrooloose/nerdcommenter'
-" Formatting
-Plug 'mhartington/formatter.nvim'
+Plug 'b3nj5m1n/kommentary'
 " Latex
 Plug 'lervag/vimtex'
 " Git plugin
@@ -32,6 +30,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " Autopairs
 Plug 'windwp/nvim-autopairs'
+" Autotag
+Plug 'windwp/nvim-ts-autotag'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat','do': ':TSUpdate'}
 " Discord flex
@@ -40,12 +40,14 @@ Plug 'andweeb/presence.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 " Todo Commenter
 Plug 'folke/todo-comments.nvim'
-" Audo tags
-Plug 'windwp/nvim-ts-autotag'
 " Snippets
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
+" Find and replace
+Plug 'windwp/nvim-spectre'
+" Java plugin
+Plug 'mfussenegger/nvim-jdtls'
 call plug#end()
 
 " Config section
@@ -77,7 +79,7 @@ set hidden
 " Remap esc key
 inoremap jk <ESC>
 " Remap leader
-let mapleader = "'"
+let mapleader = " "
 " Use system clipboard
 set clipboard=unnamedplus
 " Keep lines visible when scrolling
@@ -98,7 +100,7 @@ set completeopt=menuone,noselect
 highlight link CompeDocumentation NormalFloat
 
 " NVIM Tree Config
-nnoremap <C-z> :NvimTreeToggle <CR>
+nnoremap <C-j> :NvimTreeToggle <CR>
 let g:nvim_tree_ignore = ['.git', '.cache', '.DS_Store', '__pycache__']
 let g:nvim_tree_quit_on_open = 1
 let g:nvim_tree_indent_markers = 1
@@ -189,3 +191,18 @@ xmap        S   <Plug>(vsnip-cut-text)
 let g:vimtex_view_method = 'skim'
 let g:vimtex_compiler_progname = 'nvr'
 
+" spectre
+nnoremap <leader>S :lua require('spectre').open()<CR>
+"search current word
+nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
+vnoremap <leader>s :lua require('spectre').open_visual()<CR>
+"  search in current file
+nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+
+" java setup
+if has('nvim-0.5')
+  augroup lsp
+    au!
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+  augroup end
+endif
