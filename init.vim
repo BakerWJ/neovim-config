@@ -48,6 +48,8 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'windwp/nvim-spectre'
 " Java plugin
 Plug 'mfussenegger/nvim-jdtls'
+" Fterm
+Plug 'numtostr/FTerm.nvim'
 call plug#end()
 
 " Config section

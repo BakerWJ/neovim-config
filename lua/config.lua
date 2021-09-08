@@ -114,7 +114,8 @@ require'lspconfig'.efm.setup{
       html = {prettier},
       css = {prettier},
       json = {prettier},
-      yaml = {prettier}
+      yaml = {prettier},
+      java = {prettier}
     }
   }
 }
