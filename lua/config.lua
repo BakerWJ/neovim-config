@@ -100,6 +100,11 @@ local prettier = {
   formatStdin = true
 }
 
+local google_java = {
+  formatCommand = "google-java-format -stdin",
+  formatStdin = true
+}
+
 require'lspconfig'.efm.setup{
   init_options = {documentFormatting = true},
   filetypes = {"python", "javascript", "javascriptreact", "typescript", "typescriptreact",
@@ -115,7 +120,7 @@ require'lspconfig'.efm.setup{
       css = {prettier},
       json = {prettier},
       yaml = {prettier},
-      java = {prettier}
+      java = {google_java}
     }
   }
 }
