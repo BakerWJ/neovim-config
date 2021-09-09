@@ -205,6 +205,10 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 if has('nvim-0.5')
   augroup lsp
     au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}, root_dir = require('jdtls.setup').find_root({'gradle.build', 'pom.xml'})})
   augroup end
 endif
+
+" fterm setup
+command! FTermOpen lua require("FTerm").open()
+command! FTermClose lua require("FTerm").close()
