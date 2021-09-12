@@ -1,58 +1,4 @@
-call plug#begin()
-" Plugins
-" Theme + Lualine
-Plug 'folke/tokyonight.nvim'
-Plug 'romgrk/barbar.nvim'
-Plug 'hoob3rt/lualine.nvim'
-" File Explorer
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Icons
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'ryanoasis/vim-devicons'
-" Commenting
-Plug 'b3nj5m1n/kommentary'
-" Latex
-Plug 'lervag/vimtex'
-" Git plugin
-Plug 'tpope/vim-fugitive'
-" See edited lines from git
-Plug 'airblade/vim-gitgutter'
-" Opening page
-Plug 'mhinz/vim-startify'
-" LSP support
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-Plug 'sheerun/vim-polyglot'
-" Telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-" Autopairs
-Plug 'windwp/nvim-autopairs'
-" Autotag
-Plug 'windwp/nvim-ts-autotag'
-" Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat','do': ':TSUpdate'}
-" Discord flex
-Plug 'andweeb/presence.nvim'
-" Colorizer
-Plug 'norcalli/nvim-colorizer.lua'
-" Todo Commenter
-Plug 'folke/todo-comments.nvim'
-" Snippets
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
-Plug 'rafamadriz/friendly-snippets'
-" Find and replace
-Plug 'windwp/nvim-spectre'
-" Java plugin
-Plug 'mfussenegger/nvim-jdtls'
-" Fterm
-Plug 'numtostr/FTerm.nvim'
-call plug#end()
-
-" Config section
+lua require('plugins')
 
 " Theme settings
 set termguicolors
@@ -184,22 +130,14 @@ smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l
 
 " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 " See https://github.com/hrsh7th/vim-vsnip/pull/50
-nmap        s   <Plug>(vsnip-select-text)
-xmap        s   <Plug>(vsnip-select-text)
-nmap        S   <Plug>(vsnip-cut-text)
-xmap        S   <Plug>(vsnip-cut-text)
+" nmap        s   <Plug>(vsnip-select-text)
+" xmap        s   <Plug>(vsnip-select-text)
+" nmap        S   <Plug>(vsnip-cut-text)
+" xmap        S   <Plug>(vsnip-cut-text)
 
 " Vimtex
 let g:vimtex_view_method = 'skim'
 let g:vimtex_compiler_progname = 'nvr'
-
-" spectre
-nnoremap <leader>S :lua require('spectre').open()<CR>
-"search current word
-nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
-vnoremap <leader>s :lua require('spectre').open_visual()<CR>
-"  search in current file
-nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 
 " java setup
 if has('nvim-0.5')
@@ -212,3 +150,4 @@ endif
 " fterm setup
 command! FTermOpen lua require("FTerm").open()
 command! FTermClose lua require("FTerm").close()
+nnoremap <leader>F :lua require('FTerm').toggle()<CR>

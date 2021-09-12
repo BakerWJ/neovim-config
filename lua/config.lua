@@ -20,7 +20,6 @@ require'nvim-web-devicons'.setup {
 }
 
 -- Treesitter setup
-
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -151,6 +150,7 @@ require'compe'.setup {
   };
 }
 
+
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
@@ -258,3 +258,5 @@ require('vim.lsp.protocol').CompletionItemKind = {
     'ﬦ', -- Operator
     '', -- TypeParameter
 }
+
+require('gitsigns').setup()
