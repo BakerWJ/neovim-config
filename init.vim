@@ -5,9 +5,6 @@ set termguicolors
 syntax enable
 colorscheme tokyonight
 
-" Add lua config
-lua require('config')
-
 " Basic settings
 scriptencoding utf-8
 set encoding=utf-8
@@ -97,6 +94,7 @@ nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>rn <cmd> lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
@@ -143,11 +141,17 @@ let g:vimtex_compiler_progname = 'nvr'
 if has('nvim-0.5')
   augroup lsp
     au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}, root_dir = require('jdtls.setup').find_root({'gradle.build', 'pom.xml'})})
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}, root_dir = require('jdtls.setup').find_root({'gradle.build', 'pom.xml'})}) 
   augroup end
 endif
+
+" guh
+let s:current_file=expand("<sfile>")
 
 " fterm setup
 command! FTermOpen lua require("FTerm").open()
 command! FTermClose lua require("FTerm").close()
 nnoremap <leader>F :lua require('FTerm').toggle()<CR>
+
+" Add lua config
+lua require('config')

@@ -99,11 +99,6 @@ local prettier = {
   formatStdin = true
 }
 
-local google_java = {
-  formatCommand = "google-java-format -stdin",
-  formatStdin = true
-}
-
 require'lspconfig'.efm.setup{
   init_options = {documentFormatting = true},
   filetypes = {"python", "javascript", "javascriptreact", "typescript", "typescriptreact",
@@ -119,7 +114,6 @@ require'lspconfig'.efm.setup{
       css = {prettier},
       json = {prettier},
       yaml = {prettier},
-      java = {google_java}
     }
   }
 }
@@ -260,3 +254,21 @@ require('vim.lsp.protocol').CompletionItemKind = {
 }
 
 require('gitsigns').setup()
+
+local config = {}
+
+config['init_options'] = {
+  bundles = {
+    vim.fn.glob("/Users/bakerjackson/.config/dap/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"),
+    vim.fn.glob('/Users/bakerjackson/.config/dap/vscode-java-test/server/*.jar')
+  };
+}
+
+config['on_attach'] = function(client, bufnr)
+  -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
+  -- you make during a debug session immediately.
+  -- Remove the option if you do not want that.
+  require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+end
+
+require'nvim-tree'.setup{}

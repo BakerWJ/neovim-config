@@ -63,4 +63,9 @@ return require('packer').startup(function()
   use "numtostr/FTerm.nvim"
   -- Lightspeed
   use 'ggandor/lightspeed.nvim'
+  -- Nvim DAP
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  -- Code runner
+  use 'pianocomposer321/yabs.nvim'
 end)

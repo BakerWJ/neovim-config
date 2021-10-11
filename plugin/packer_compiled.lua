@@ -109,6 +109,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/nvim-dap-ui"
+  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/nvim-jdtls"
@@ -141,10 +149,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/presence.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/telescope.nvim"
@@ -164,6 +168,10 @@ _G.packer_plugins = {
   ["vim-startify"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vim-startify"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vim-test"
   },
   ["vim-vsnip"] = {
     loaded = true,
