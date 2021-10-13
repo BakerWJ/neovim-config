@@ -77,6 +77,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["coq.artifacts"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/coq.artifacts"
+  },
+  coq_nvim = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/coq_nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/friendly-snippets"
@@ -84,6 +92,10 @@ _G.packer_plugins = {
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/glow.nvim"
   },
   kommentary = {
     loaded = true,
@@ -104,10 +116,6 @@ _G.packer_plugins = {
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
-  },
-  ["nvim-compe"] = {
-    loaded = true,
-    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -161,6 +169,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
+  ["vim-doge"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vim-doge"
+  },
   ["vim-polyglot"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vim-polyglot"
@@ -168,10 +180,6 @@ _G.packer_plugins = {
   ["vim-startify"] = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vim-startify"
-  },
-  ["vim-test"] = {
-    loaded = true,
-    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vim-test"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -184,6 +192,10 @@ _G.packer_plugins = {
   vimtex = {
     loaded = true,
     path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/vimtex"
+  },
+  ["yabs.nvim"] = {
+    loaded = true,
+    path = "/Users/bakerjackson/.local/share/nvim/site/pack/packer/start/yabs.nvim"
   }
 }
 

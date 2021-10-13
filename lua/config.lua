@@ -118,33 +118,6 @@ require'lspconfig'.efm.setup{
   }
 }
 
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  resolve_timeout = 800;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = true;
-
-  source = {
-    path = true;
-    buffer = false;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = false;
-  };
-}
-
-
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
@@ -191,18 +164,13 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 -- autopairs config
 require('nvim-autopairs').setup()
 
-require("nvim-autopairs.completion.compe").setup({
-  map_cr = true, --  map <CR> on insert mode
-  map_complete = true -- it will auto insert `(` after select function or method item
-})
-
 local remap = vim.api.nvim_set_keymap
 local npairs = require('nvim-autopairs')
 
 -- skip it, if you use another global object
 _G.MUtils= {}
 
-vim.g.completion_confirm_key = ""
+--[[ vim.g.completion_confirm_key = ""
 MUtils.completion_confirm=function()
   if vim.fn.pumvisible() ~= 0  then
     if vim.fn.complete_info()["selected"] ~= -1 then
@@ -213,7 +181,7 @@ MUtils.completion_confirm=function()
   else
     return npairs.autopairs_cr()
   end
-end
+end ]]
 
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
@@ -272,3 +240,7 @@ config['on_attach'] = function(client, bufnr)
 end
 
 require'nvim-tree'.setup{}
+
+require('coq')
+
+vim.g.glow_binary_path = "/usr/local/bin"

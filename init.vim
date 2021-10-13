@@ -42,7 +42,7 @@ set autoread
 set history=1000
 " compe completion
 set completeopt=menuone,noselect
-highlight link CompeDocumentation NormalFloat
+" highlight link CompeDocumentation NormalFloat
 
 " NVIM Tree Config
 nnoremap <C-j> :NvimTreeToggle <CR>
@@ -74,19 +74,6 @@ let g:nvim_tree_show_icons = {
     \ 'folder_arrows': 1,
     \ }
 
-" NERD Commenter
-let g:NERDCreateDefaultMappings = 1
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
-
-" Compe bindings
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " LSP config (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
@@ -153,5 +140,13 @@ command! FTermOpen lua require("FTerm").open()
 command! FTermClose lua require("FTerm").close()
 nnoremap <leader>F :lua require('FTerm').toggle()<CR>
 
+" coq settings
+let g:coq_settings = { 'display.pum.fast_close': v:false, 'auto_start': 'shut-up' }
+
+"doge settings
+let g:doge_mapping = 'mn'
+let g:doge_doc_standard_python = 'google'
+
+"
 " Add lua config
 lua require('config')

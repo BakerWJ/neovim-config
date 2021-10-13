@@ -29,7 +29,12 @@ return require('packer').startup(function()
   -- Opening page
   use 'mhinz/vim-startify'
   -- LSP support
-  use 'hrsh7th/nvim-compe'
+  use {
+    'ms-jpq/coq_nvim', branch='coq'
+  }
+  use {
+    'ms-jpq/coq.artifacts', branch='artifacts'
+  }
   use 'sheerun/vim-polyglot'
   use 'neovim/nvim-lspconfig'
   -- Telescope
@@ -68,4 +73,11 @@ return require('packer').startup(function()
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   -- Code runner
   use 'pianocomposer321/yabs.nvim'
+  -- Glow
+  use {"ellisonleao/glow.nvim"}
+  -- documentation
+  use {
+    "kkoomen/vim-doge",
+    run=":call doge#install()"
+  }
 end)
