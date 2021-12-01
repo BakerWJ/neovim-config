@@ -5,6 +5,9 @@ set termguicolors
 syntax enable
 colorscheme tokyonight
 
+" coq settings
+let g:coq_settings = { 'display.pum.fast_close': v:false, 'auto_start': 'shut-up' }
+
 lua require('config')
 
 " Basic settings
@@ -105,8 +108,6 @@ let g:vimtex_compiler_progname = 'nvr'
 " guh
 let s:current_file=expand("<sfile>")
 
-" coq settings
-let g:coq_settings = { 'display.pum.fast_close': v:false, 'auto_start': 'shut-up' }
 
 "doge settings
 let g:doge_mapping = 'mn'

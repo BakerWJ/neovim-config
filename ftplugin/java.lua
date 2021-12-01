@@ -1,3 +1,6 @@
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+
+local workspace_dir = '/Users/bakerwjackson/jdtls-workspace/' .. project_name
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
   -- The command that starts the language server
@@ -34,7 +37,7 @@ local config = {
 
     -- 💀
     -- See `data directory configuration` section in the README
-    '-data', '${1:-$HOME/workspace}'
+    '-data', workspace_dir
   },
 
   -- 💀

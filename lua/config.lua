@@ -72,7 +72,7 @@ lsp_installer.on_server_ready(function(server)
       opts.settings = {
         python = {
           analysis = {
-            stubPath = '/Users/bakerjackson/.config/nvim/typings/'
+            stubPath = '/Users/bakerwjackson/.config/nvim/typings/'
           }
       }}
     end
@@ -178,7 +178,7 @@ require('gitsigns').setup()
 require'nvim-tree'.setup{
   hijack_cursor = true,
   git = {enable = false, ignore=true},
-  filters = {custom={'.git'}}
+  filters = {custom={'.git', '.idea', '.cache', '.DS_Store', '__pycache__'}}
 }
 
 require('coq')
