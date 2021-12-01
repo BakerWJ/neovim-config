@@ -37,6 +37,7 @@ return require('packer').startup(function()
   }
   use 'sheerun/vim-polyglot'
   use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -58,21 +59,13 @@ return require('packer').startup(function()
   }
   -- Colorizer
   use 'norcalli/nvim-colorizer.lua'
-  -- Snippets
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
-  use 'rafamadriz/friendly-snippets'
   -- Java plugin
   use 'mfussenegger/nvim-jdtls'
-  -- Fterm
-  use "numtostr/FTerm.nvim"
   -- Lightspeed
   use 'ggandor/lightspeed.nvim'
   -- Nvim DAP
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-  -- Code runner
-  use 'pianocomposer321/yabs.nvim'
   -- Glow
   use {"ellisonleao/glow.nvim"}
   -- documentation
