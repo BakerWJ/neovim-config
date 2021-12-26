@@ -38,6 +38,7 @@ return require('packer').startup(function()
   use 'sheerun/vim-polyglot'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use 'jose-elias-alvarez/null-ls.nvim'
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -73,4 +74,7 @@ return require('packer').startup(function()
     "kkoomen/vim-doge",
     run=":call doge#install()"
   }
+  -- testing
+  use 'vim-test/vim-test'
+  use 'tweekmonster/startuptime.vim'
 end)

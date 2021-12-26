@@ -108,7 +108,8 @@ let g:vimtex_compiler_progname = 'nvr'
 " guh
 let s:current_file=expand("<sfile>")
 
-
 "doge settings
 let g:doge_mapping = 'mn'
 let g:doge_doc_standard_python = 'google'
+
+let test#java#runner = 'gradletest'

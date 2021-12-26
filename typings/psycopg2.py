@@ -1,5 +1,6 @@
 from typing import Any, Iterable
 
+
 class Cursor:
     arraysize: int
     binary_types: Any = ...

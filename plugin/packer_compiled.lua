@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -174,6 +179,11 @@ _G.packer_plugins = {
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["startuptime.vim"] = {
+    loaded = true,
+    path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/startuptime.vim",
+    url = "https://github.com/tweekmonster/startuptime.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -203,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   },
   vimtex = {
     loaded = true,
