@@ -78,5 +78,4 @@ return require("packer").startup(function()
 	})
 	-- testing
 	use("vim-test/vim-test")
-	use("tweekmonster/startuptime.vim")
 end)

@@ -179,11 +179,6 @@ _G.packer_plugins = {
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["startuptime.vim"] = {
-    loaded = true,
-    path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/startuptime.vim",
-    url = "https://github.com/tweekmonster/startuptime.vim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/telescope.nvim",
