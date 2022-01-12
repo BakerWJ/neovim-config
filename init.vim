@@ -96,7 +96,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Format files using LSP
-nnoremap <silent> ff    <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> ff    <cmd>lua vim.lsp.buf.formatting_sync()<CR>
 
 " Remove vim lsp Pattern not found at bottom
 set shortmess+=c

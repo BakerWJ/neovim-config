@@ -40,29 +40,6 @@ local lsp_installer = require("nvim-lsp-installer")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-local flake8 = {
-	lintCommand = "flake8 --max-line-length 88 --format '%(path)s:%(row)d:%(col)d: %(code)s %(code)s %(text)s' --stdin-display-name ${INPUT} -",
-	lintStdin = true,
-	lintIgnoreExitCode = true,
-	lintFormats = { "%f:%l:%c: %t%n%n%n %m" },
-	lintSource = "flake8",
-}
-
-local black = {
-	formatCommand = "black -",
-	formatStdin = true,
-}
-
-local isort = {
-	formatcommand = "isort --stdout --profile black -",
-	formatStdin = true,
-}
-
-local prettier = {
-	formatCommand = "prettier --stdin-filepath ${INPUT}",
-	formatStdin = true,
-}
-
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)
@@ -96,12 +73,17 @@ local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.black,
-		null_ls.builtins.formatting.codespell,
 		null_ls.builtins.diagnostics.codespell,
 		null_ls.builtins.formatting.isort,
+		null_ls.builtins.diagnostics.flake8,
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.stylua,
 	},
+	on_attach = function(client)
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+		end
+	end,
 })
 
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", { expr = true })
