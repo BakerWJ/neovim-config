@@ -63,6 +63,10 @@ lsp_installer.on_server_ready(function(server)
 		opts.capabilities = capabilities
 	end
 
+	opts.on_attach = function(client)
+		client.resolved_capabilities.document_formatting = false
+	end
+
 	if server.name ~= "jdtls" then
 		server:setup(opts)
 	end
@@ -78,6 +82,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.flake8,
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.clang_format,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
