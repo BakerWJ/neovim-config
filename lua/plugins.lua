@@ -37,7 +37,6 @@ return require("packer").startup(function()
 		"ms-jpq/coq.artifacts",
 		branch = "artifacts",
 	})
-	use("sheerun/vim-polyglot")
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -78,4 +77,5 @@ return require("packer").startup(function()
 	})
 	-- testing
 	use("vim-test/vim-test")
+	use("tpope/vim-sleuth")
 end)

@@ -40,6 +40,8 @@ local lsp_installer = require("nvim-lsp-installer")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+local coq = require("coq")
+
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)
@@ -68,7 +70,7 @@ lsp_installer.on_server_ready(function(server)
 	end
 
 	if server.name ~= "jdtls" then
-		server:setup(opts)
+		server:setup(coq.lsp_ensure_capabilities(opts))
 	end
 end)
 

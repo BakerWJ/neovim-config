@@ -199,10 +199,10 @@ _G.packer_plugins = {
     path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/vim-doge",
     url = "https://github.com/kkoomen/vim-doge"
   },
-  ["vim-polyglot"] = {
+  ["vim-sleuth"] = {
     loaded = true,
-    path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/vim-polyglot",
-    url = "https://github.com/sheerun/vim-polyglot"
+    path = "/Users/bakerwjackson/.local/share/nvim/site/pack/packer/start/vim-sleuth",
+    url = "https://github.com/tpope/vim-sleuth"
   },
   ["vim-startify"] = {
     loaded = true,
