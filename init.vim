@@ -5,9 +5,6 @@ set termguicolors
 syntax enable
 colorscheme tokyonight
 
-" coq settings
-let g:coq_settings = { 'display.pum.fast_close': v:false, 'auto_start': 'shut-up' }
-
 lua require('config')
 
 " Basic settings
@@ -46,8 +43,7 @@ set autoread
 " increase history length
 set history=1000
 " compe completion
-set completeopt=menuone,noselect
-" highlight link CompeDocumentation NormalFloat
+set completeopt=menu,menuone,noselect
 
 " NVIM Tree Config
 nnoremap <C-j> :NvimTreeToggle <CR>
@@ -113,3 +109,17 @@ let g:doge_mapping = 'mn'
 let g:doge_doc_standard_python = 'google'
 
 let test#java#runner = 'gradletest'
+
+" Expand
+imap <expr> <CR>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+smap <expr> <CR>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+
+" Expand or jump
+imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
+" Jump forward or backward
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'

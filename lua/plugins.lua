@@ -28,15 +28,16 @@ return require("packer").startup(function()
 	})
 	-- Opening page
 	use("mhinz/vim-startify")
+	-- nvim-cmp
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-vsnip")
+	-- snippets
+	use("hrsh7th/vim-vsnip")
+	use("rafamadriz/friendly-snippets")
 	-- LSP support
-	use({
-		"ms-jpq/coq_nvim",
-		branch = "coq",
-	})
-	use({
-		"ms-jpq/coq.artifacts",
-		branch = "artifacts",
-	})
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
