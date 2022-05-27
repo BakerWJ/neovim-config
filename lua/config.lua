@@ -140,6 +140,11 @@ require("nvim-tree").setup({
 	hijack_cursor = true,
 	git = { enable = false, ignore = true },
 	filters = { custom = { ".git", ".idea", ".cache", ".DS_Store", "__pycache__" } },
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
+	},
 })
 
 local cmp = require("cmp")
@@ -179,6 +184,7 @@ cmp.setup({
 				feedkey("<Plug>(vsnip-jump-prev)", "")
 			end
 		end, { "i", "s" }),
+		["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	},
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },

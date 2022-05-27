@@ -1,3 +1,4 @@
+lua require('impatient')
 lua require('plugins')
 
 " Theme settings
@@ -47,7 +48,6 @@ set completeopt=menu,menuone,noselect
 
 " NVIM Tree Config
 nnoremap <C-j> :NvimTreeToggle <CR>
-let g:nvim_tree_quit_on_open = 1
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_icon_padding = '  '
 let g:nvim_tree_git_hl = 1
@@ -106,7 +106,6 @@ let s:current_file=expand("<sfile>")
 
 "doge settings
 let g:doge_mapping = 'mn'
-let g:doge_doc_standard_python = 'google'
 
 let test#java#runner = 'gradletest'
 

@@ -18,7 +18,7 @@ return require("packer").startup(function()
 	-- Commenting
 	use("b3nj5m1n/kommentary")
 	-- Latex
-	use("lervag/vimtex")
+	use({ "lervag/vimtex" })
 	-- Git plugins
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -26,8 +26,14 @@ return require("packer").startup(function()
 			"nvim-lua/plenary.nvim",
 		},
 	})
-	-- Opening page
-	use("mhinz/vim-startify")
+	-- opening page
+	use({
+		"goolord/alpha-nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
 	-- nvim-cmp
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
@@ -63,7 +69,7 @@ return require("packer").startup(function()
 	-- Colorizer
 	use("norcalli/nvim-colorizer.lua")
 	-- Java plugin
-	use("mfussenegger/nvim-jdtls")
+	use({ "mfussenegger/nvim-jdtls" })
 	-- Lightspeed
 	use("ggandor/lightspeed.nvim")
 	-- Nvim DAP
@@ -79,4 +85,7 @@ return require("packer").startup(function()
 	-- testing
 	use("vim-test/vim-test")
 	use("tpope/vim-sleuth")
+	-- filetype
+	use("nathom/filetype.nvim")
+	use("lewis6991/impatient.nvim")
 end)
